@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lions.app.sportsstore.ui.StoreFilterPage">
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price"/>
+
+    <com.crystal.crystalrangeseekbar.widgets.BubbleThumbRangeSeekbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:corner_radius="10"
+        app:min_value="100"
+        app:max_value="5000"
+        app:bar_color="#1e1e19"
+        android:id="@+id/price_filter"
+        app:bar_highlight_color="#ffb300"
+        app:left_thumb_color="#775E4F"
+        app:left_thumb_color_pressed="#4C2D1A"
+        app:data_type="_integer"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Colour"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <com.lions.app.sportsstore.structs.ExpandableHeightGridView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/filter_colour"
+        >
+    </com.lions.app.sportsstore.structs.ExpandableHeightGridView>
+
+
+
+
+</LinearLayout>
