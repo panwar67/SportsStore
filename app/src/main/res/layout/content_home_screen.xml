@@ -1,56 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="#f6f6f6"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.lions.app.sportsstore.ui.HomeScreen"
     tools:showIn="@layout/app_bar_home_screen">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Trending Products"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
 
-        <org.lucasr.twowayview.TwoWayView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:id="@+id/trending_products">
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
 
-        </org.lucasr.twowayview.TwoWayView>
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"></View>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Shops Near You"/>
+            <TextView
+                android:id="@+id/title_fresh_arrivals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="FRESH ARRIVALS"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
 
-        <com.lions.app.sportsstore.structs.ExpandableHeightGridView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="2"
-            android:orientation="horizontal"
-            android:id="@+id/near_you">
-
-        </com.lions.app.sportsstore.structs.ExpandableHeightGridView>
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/black"></View>
 
 
+            <org.lucasr.twowayview.TwoWayView
+                android:id="@+id/fresh_arrivals"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+            </org.lucasr.twowayview.TwoWayView>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"></View>
+
+            <TextView
+                android:id="@+id/title_offers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="OFFERS FOR YOU"
+                android:textAlignment="center"
+
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/black"></View>
+
+            <com.lions.app.sportsstore.structs.ExpandableHeightGridView
+                android:id="@+id/near_you"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:orientation="vertical"></com.lions.app.sportsstore.structs.ExpandableHeightGridView>
 
 
-    </LinearLayout>
+        </LinearLayout>
 
-
+    </ScrollView>
 
 
 </LinearLayout>

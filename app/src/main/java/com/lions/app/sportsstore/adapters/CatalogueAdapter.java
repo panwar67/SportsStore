@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lions.app.sportsstore.R;
+import com.lions.app.sportsstore.structs.Campaigns;
 import com.lions.app.sportsstore.structs.Catalogues;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -27,13 +28,13 @@ import java.util.ArrayList;
 public class CatalogueAdapter extends BaseAdapter {
 
     Context context;
-    ArrayList<Catalogues> result;
+    ArrayList<Campaigns> result;
     LayoutInflater inflater = null;
     ImageLoader imageLoader;
     DisplayImageOptions options;
 
 
-    public CatalogueAdapter(Context cont, ArrayList<Catalogues> data)
+    public CatalogueAdapter(Context cont, ArrayList<Campaigns> data)
     {
         context = cont;
         result = data;
@@ -73,11 +74,11 @@ public class CatalogueAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View root = inflater.inflate(R.layout.catalogue_item,null);
 
-        TextView title = (TextView)root.findViewById(R.id.store_catalogue_title);
+       // TextView title = (TextView)root.findViewById(R.id.store_catalogue_title);
         ImageView imageView = (ImageView)root.findViewById(R.id.store_catalogue_image);
 
-        title.setText(result.get(i).getCatName());
-        imageLoader.displayImage(result.get(i).getUrl(),imageView);
+        //title.setText(result.get(i).getCatName());
+        imageLoader.displayImage(result.get(i).getCampaignUrl(),imageView);
 
 
         return root;

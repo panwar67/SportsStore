@@ -14,6 +14,34 @@ public class Store {
     String store_address;
     String store_cat_id;
     String store_url;
+    String store_camp;
+    String store_distance;
+    String store_tags;
+
+    public String getStore_tags() {
+        return store_tags;
+    }
+
+    public void setStore_tags(String store_tags) {
+        this.store_tags = store_tags;
+    }
+
+    public String getStore_distance() {
+        return store_distance;
+    }
+
+    public void setStore_distance(String store_distance) {
+        this.store_distance = store_distance;
+    }
+
+
+    public String getStore_camp() {
+        return store_camp;
+    }
+
+    public void setStore_camp(String store_camp) {
+        this.store_camp = store_camp;
+    }
 
     public String getStore_url() {
         return store_url;

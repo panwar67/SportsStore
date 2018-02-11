@@ -28,7 +28,7 @@ public class NewImageSlider extends BaseSliderView {
     public View getView() {
         View v = LayoutInflater.from(getContext()).inflate(com.daimajia.slider.library.R.layout.render_type_default,null);
         ImageView target = (ImageView)v.findViewById(com.daimajia.slider.library.R.id.daimajia_slider_image);
-        //target.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        target.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
         bindEventAndShow(v, target);
         return v;

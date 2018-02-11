@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Cricket"
+
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#636363"
+        android:gravity="center"
+        android:id="@+id/list_item"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat" />
+
+</LinearLayout>

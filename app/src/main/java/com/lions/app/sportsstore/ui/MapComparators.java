@@ -1,8 +1,10 @@
-package com.lions.app.sportsstore.structs;
+package com.lions.app.sportsstore.ui;
 
 /**
  * Created by Panwar on 21/01/18.
  */
+
+import com.lions.app.sportsstore.structs.Products;
 
 import java.util.Comparator;
 import java.util.Map;

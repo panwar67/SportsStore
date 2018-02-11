@@ -2,6 +2,7 @@ package com.lions.app.sportsstore.adapters;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,11 +82,14 @@ public class ProductListAdapter extends BaseAdapter {
         TextView product_name = (TextView)root.findViewById(R.id.product_item_name);
         TextView product_price = (TextView)root.findViewById(R.id.product_item_price);
         RatingBar ratingBar = (RatingBar)root.findViewById(R.id.product_item_rating);
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(),"SourceSansProRegular.otf");
 
         ratingBar.setRating(Float.parseFloat(result.get(i).getProduct_rating()));
         imageLoader.displayImage(result.get(i).getProduct_url(),product_image);
         product_name.setText(result.get(i).getProduct_name());
         product_price.setText("Price : Rs. "+result.get(i).getProduct_price());
+        product_name.setTypeface(typeface);
+        product_price.setTypeface(typeface);
 
         return root;
     }
